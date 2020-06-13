@@ -10,13 +10,15 @@ app.intent('Default Welcome Intent', (conv)=>{
     conv.ask('Hello world!!');
 });
 app.intent('get train number',(conv,{number})=>{
+    var result;
 let data = fetch("https://your-first-herokus-app.herokuapp.com/status/02723/yesterday")
 .then(response => response.json())
 .then(jsondata=> {
   result = jsondata.data;
-  console.log(result);});
-  
-return conv.close('The status of train number'+number+'is amazing!');
+  console.log(result);
+return result;})
+.then(result => conv.close('The status of train number'+number+'is amazing!'+result));
+//return conv.close('The status of train number'+number+'is amazing!');
 });
 
 const expressApp = express().use(bodyParser.json());
