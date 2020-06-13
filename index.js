@@ -16,7 +16,7 @@ let data = fetch("https://your-first-herokus-app.herokuapp.com/status/02723/yest
 .then(jsondata=> {
   result = jsondata.data;
   console.log(result);
-  return conv.close('The status of train number'+number+'is amazing!');
+  conv.close('The status of train number'+number+'is amazing!');
 });
 });
 
