@@ -10,7 +10,7 @@ app.intent('Default Welcome Intent', (conv)=>{
     conv.ask('Hello world!!');
 });
 app.intent('get train number',(conv,{number})=>{
-conv.close('The status of train number'+number+'is amazing!');
+return conv.close('The status of train number'+number+'is amazing!');
 });
 
 const expressApp = express().use(bodyParser.json());
