@@ -18,7 +18,7 @@ let data = fetch("https://your-first-herokus-app.herokuapp.com/status/02723/yest
   console.log(result);
 return result;})
 .then(result => conv.close('The status of train number'+number+'is amazing!'+result));
-//return conv.close('The status of train number'+number+'is amazing!');
+return conv.close('The status of train number'+number+'is amazing!');
 });
 
 const expressApp = express().use(bodyParser.json());
