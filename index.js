@@ -22,5 +22,4 @@ let data = fetch("https://your-first-herokus-app.herokuapp.com/status/02723/yest
 
 const expressApp = express().use(bodyParser.json());
 expressApp.post('/webhook',app);
-
 expressApp.listen(port);
