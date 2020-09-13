@@ -11,7 +11,7 @@ app.intent('Default Welcome Intent', (conv)=>{
 
 app.intent('get train number',async(conv,{number})=>{
     var result;
-const resultdata =await fetch(`https://your-first-herokus-app.herokuapp.com/status/{$number}/yesterday`);
+const resultdata =await fetch("https://your-first-herokus-app.herokuapp.com/status/"+number+"/yesterday");
 conv.close('The status of train number'+number+'is amazing!'+result)
 /*.then(response => response.json())
 .then(jsondata=> {
